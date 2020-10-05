@@ -9,7 +9,11 @@ A mí me funciona con lts/carbon (v8.16.1).
 ## DEV
 
 ```
+# tiene que ser v8
+node -v
+# primer instalación de paquetes
 yarn
+# servir en http://localhost:4200/
 yarn start
 ```
 
