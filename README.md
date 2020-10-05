@@ -1,3 +1,5 @@
+Este repositorio arrancó como una copia de DemocraciaEnRed/causascomunes-presion-frontend [cb40075](https://github.com/DemocraciaEnRed/causascomunes-presion-frontend/tree/cb400753fdceb57253996354352ee9d234d4fe84)
+
 # Causas Comunes - Frontend
 
 Tal vez salgan errores por la versión de node que usen.
