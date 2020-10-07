@@ -17,6 +17,9 @@ yarn
 yarn start
 ```
 
+para inicio rápido con `nvm`:
+`nvm use v8 && yarn start`
+
 ## Deployment
 
 Nunca olvidarse de hacer build antes de pushear!
