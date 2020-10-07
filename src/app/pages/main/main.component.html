@@ -1,5 +1,13 @@
-<div class="bg-mosaico-blanco pt-4">
-<ng-template [ngIf]="highlightedProjectExists">
+<div class="container text-center mt-5 banner-home">
+  <div class="col-12 col-md-10 offset-md-1">
+    <h1>¡Llegó el momento de juntar fuerzas para avanzar unidas!</h1>
+    <h2>Esta plataforma fue creada con el propósito de ampliar el potencial de las causas feministas.
+      Explora y descubre las herramientas disponibles.</h2>
+  </div>
+</div>
+
+<div class="bg-mosaico-blanco pt-4 d-none">
+  <ng-template [ngIf]="highlightedProjectExists">
     <!-- Título y descripcion-->
     <div class="container">
         <div class="row desc-strip-home">
@@ -43,7 +51,7 @@
     </div>
 
     <div class="mt-5 w-100 separador"></div>
-</ng-template>
+  </ng-template>
 </div>
 
 <div id="proyectos" class="w-100 bg-mosaico-blanco">

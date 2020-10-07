@@ -43,3 +43,12 @@
         left: -10px;
     }
 }
+
+.banner-home{
+  h2 {
+    font-size: 16px;
+    @media (min-width: $width-medium) {
+      font-size: 20px;
+    }
+  }
+}
