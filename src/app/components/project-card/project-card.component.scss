@@ -12,20 +12,24 @@
             height: 300px !important;
         }
     }
-  
+
     .col-img {
         padding: 0px !important;
         background-repeat: no-repeat;
         cursor: pointer;
         border-radius: 20px 20px 0px 0px;
-        background-position: left;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        min-height: 100px;
+        /*background-position: left;
         min-height: 100px;
         background-size: 110px;
         @media (min-width: $width-medium) {
           background-position: top center;
           background-size: 200px;
           border-radius: 20px 0px 0px 20px;
-        }
+        }*/
         &.center-img {
           background-position: center;
           background-size: cover;
@@ -33,19 +37,17 @@
         }
         .project-title {
             position: relative;
-            text-align: left;
             font-family: $basker;
-            color: $blanco;
-            font-size: 35px;
-            top: 22px;
+            font-size: 20px;
             font-weight: bold;
-            left: 100px;
+            text-align: center;
+            line-height: 32px;
+            color: #881dfd;
+            background-color: white;
+            margin: auto;
+            padding: 0 10px;
             @media (min-width: $width-medium) {
-              font-size: 40px;
-              top: 18px;
-                top: 180px;
-                text-align: center;
-                left: inherit;
+              font-size: 26px;
             }
         }
     }

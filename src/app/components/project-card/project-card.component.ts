@@ -12,6 +12,7 @@ export class ProjectCardComponent implements OnInit {
 
     @Input() project: Project;
     public backgroundImage: string;
+    public projectTitle: SafeHtml;
     public projectDescription: SafeHtml;
     //agregados por nosotres
     public bgColor: string;
@@ -34,11 +35,12 @@ export class ProjectCardComponent implements OnInit {
             environment.imgBase + this.project.dir.replace(/\\/g, '/') + '/' + this.project.image + ')';
         this.backgroundImage = this.sanitizeStyle(backgroundAux);
         //this.projectDescription = this.sanitizeHtml(this.project.short_text);
+        this.projectTitle = this.project.name;
         this.projectDescription = this.project.short_text;
-      
+
         let notCausas = ['debate-presidencial', 'derechos-en-juego', 'acuerdo-social-anticorrupcion'];
         this.centerImg = notCausas.indexOf(this.project.slug) != -1;
-      
+
         let bgCol='';
         let causa='';
         //this.project.slug es la url interna
