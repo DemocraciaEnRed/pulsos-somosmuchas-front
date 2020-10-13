@@ -15,12 +15,11 @@
   <!-- Politicxs -->
   <politician-slider [politiciansList]="politiciansListSlider" [project]="currentProject"></politician-slider>
 </div>
-<div [hidden]="currentProject.show_tally == 0" class="w-100 separador"></div>
 
 <div class="mb-5 mb-md-0 w-100 separador"></div>
 
 <ng-template [ngIf]="!currentProject.es_debate">
-  <div class="w-100 bg-blanco">  
+  <div class="w-100 bg-blanco">
     <propuesta-slider [project]="currentProject"></propuesta-slider>
   </div>
 </ng-template>
