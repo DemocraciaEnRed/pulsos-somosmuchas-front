@@ -13,8 +13,8 @@
     min-height: 250px;
     background-color: #cdcdcd;
     /* mismo b-radius que .politician-card */
-    border-radius: 20px 20px 0px 0px; 
-  
+    border-radius: 20px 20px 0px 0px;
+
     .card-img-top{
       border-radius: 20px 20px 0px 0px;
     }
@@ -29,7 +29,7 @@
     border-radius: 30px;
     font-size: 14px;
     font-weight: 500;
-  
+
   /* estos nombre vienen de {{stance}} en el html */
   .AFavor & {
       color: $aFavor;
@@ -39,15 +39,15 @@
       color: $enContra;
       background-color: $enContra-light;
   }
-  .SeAbstiene &, .NoConfirmado &, .SinDefinir &{
+  .SeAbstiene & {
       color: $seAbstiene;
       background-color: $seAbstiene-light;
   }
-  /*.NoConfirmado & {
+  .NoConfirmado &, .SinDefinir & {
       color: $noConfirmado;
       background-color: $noConfirmado-light;
   }
-  .SinDefinir & {
+  /*.SinDefinir & {
       color: $sinDefinir;
       background-color: $sinDefinir-light;
   }*/
@@ -57,7 +57,7 @@
 .title {
     display: block;
     text-align: left;
-    font-family: $lato;  
+    font-family: $lato;
     font-size: 18px;
     font-weight: 600;
     color: #474747;

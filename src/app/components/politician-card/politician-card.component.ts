@@ -23,7 +23,7 @@ export class PoliticianCardComponent implements OnInit {
                 if (stance.project_id === this._project.id) {
                     this.stance = stance.name;
                     this.stance_id = stance.id;
-                  
+
                     let postura = '';
                     switch (stance.name) {
                       case 'AFavor':
@@ -33,6 +33,8 @@ export class PoliticianCardComponent implements OnInit {
                         postura = 'En contra';
                         break;
                       case 'SeAbstiene':
+                        postura = 'Se abstiene';
+                        break;
                       case 'NoConfirmado':
                       case 'SinDefinir':
                       default:
