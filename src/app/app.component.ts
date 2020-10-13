@@ -52,7 +52,7 @@ export class AppComponent {
       this.newsletterMessage = '';
       if(this.formGroup.valid) {
         console.log(this.formGroup);
-        window.open('https://causascomunes.us3.list-manage.com/subscribe/post?u=a2ed796c70f5a1770cbcb80ba&amp;id=885233fed6&MERGE0='+this.formGroup.value.email);
+        window.open('https://gmail.us10.list-manage.com/subscribe/post?u=34c72ae7cd29d3ec62b506511&amp;id=3e5cb2fca9&MERGE0='+this.formGroup.value.email);
         this.newsletterMessage = '¡Perfecto! Siga las instrucciones de la página de subscripción';
         this.submitted = true;
         /*
