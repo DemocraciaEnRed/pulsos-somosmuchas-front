@@ -32,14 +32,14 @@
             </select>
         </div>
         <div class="col">
-            <label class="filter-label">Bloque</label>
+            <label class="filter-label">Partido</label>
             <select name="selectedParty" [(ngModel)]="selectedParty" class="form-control" (change)="onFilterChange('party', $event.target.value)">
                 <option>Todos</option>
                 <option *ngFor="let op of partiesOptions" [value]="op.name">{{op.name}}</option>
             </select>
         </div>
         <div class="col">
-            <label class="filter-label">Distrito</label>
+            <label class="filter-label">Departamento</label>
             <select name="selectedDistrict" [(ngModel)]="selectedDistrict" class="form-control" (change)="onFilterChange('district', $event.target.value)">
                 <option>Todos</option>
                 <option *ngFor="let op of districtsOptions" [value]="op.hasc">{{op.name}}</option>
