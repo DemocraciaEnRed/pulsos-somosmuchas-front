@@ -116,7 +116,7 @@ export class FullListComponent {
     }
 
     private filterDistrict(list: Politician[]) {
-        return list.filter(p => p.district.hasc === this.selectedDistrict || this.selectedDistrict === 'Todos');
+        return list.filter(p => p.district.id.toString() === this.selectedDistrict || this.selectedDistrict === 'Todos');
     }
 
     public resetFilter(): void {

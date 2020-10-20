@@ -42,7 +42,7 @@
             <label class="filter-label">Departamento</label>
             <select name="selectedDistrict" [(ngModel)]="selectedDistrict" class="form-control" (change)="onFilterChange('district', $event.target.value)">
                 <option>Todos</option>
-                <option *ngFor="let op of districtsOptions" [value]="op.hasc">{{op.name}}</option>
+                <option *ngFor="let op of districtsOptions" [value]="op.id">{{op.name}}</option>
             </select>
         </div>
         <div class="col">
