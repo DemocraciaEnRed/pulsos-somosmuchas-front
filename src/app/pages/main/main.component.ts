@@ -54,14 +54,14 @@ export class MainComponent {
                     this.projectDescription = $highlightedProject.slider_text.replace(/(http.*)[ .]/, '<a href="$1" target="_blank" rel="noopener noreferrer">LINK</a> ');
                     this.politicianService
                         .getAllByProject($highlightedProject.slug, true)
-                        .then(r => this.politiciansList = r.slice(0, 20).sort(function() {return .5 - Math.random(); }) );
+                        .then(r => this.politiciansList = r.slice(0, 100).sort(function() {return .5 - Math.random(); }) );
                 }
-          
+
                 let rProjectListFirst = [];
                 let rProjectCausas = [];
                 let firstToShow = ['debate-presidencial', 'derechos-en-juego', 'acuerdo-social-anticorrupcion'];
                 let dontShow = ['debate-presidencial'];
-                
+
                 response.forEach(function(project) {
                     if (dontShow.indexOf(project.slug) != -1)
                       return;
@@ -71,7 +71,7 @@ export class MainComponent {
                       rProjectCausas.push(project)
                 });
                 this.projectList = rProjectListFirst.concat(rProjectCausas);
-          
+
                 if (this.isMobileView) {
                     this.initializeCarousel()
                 }
@@ -89,7 +89,7 @@ export class MainComponent {
         } else {
             this.isMobileView = false;
         }
-      
+
         this.isIOS = /(iPad|iPhone|iPod)/g.test(navigator.userAgent);
     }
 
@@ -103,7 +103,7 @@ export class MainComponent {
                 pauseAutoPlayOnHover: false
             });
         }, 200);
-    }	
+    }
 
     @HostListener('window:resize', ['$event'])
     onResize(_event) {
