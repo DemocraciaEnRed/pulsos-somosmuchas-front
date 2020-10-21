@@ -70,7 +70,7 @@ export class ProjectViewComponent implements OnInit {
                                   rPoliticiansListSlider.push(politician)
                             });
                             this.politiciansListSlider = rPoliticiansListSlider;*/
-                            this.politiciansListSlider = response.slice(0, 100).sort(function() {return .5 - Math.random(); });
+                            this.politiciansListSlider = response.slice(0, 30).sort(function() {return .5 - Math.random(); });
                         });
                     const element = document.querySelector('#activa');
                     element.scrollIntoView();
