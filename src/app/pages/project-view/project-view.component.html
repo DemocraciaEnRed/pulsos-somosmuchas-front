@@ -1,6 +1,14 @@
+<!-- Título -->
+<div class="bg-mosaico-blanco">
+  <div class="container">
+      <div class="row desc-strip">
+          <h1 class="desc-title text-center text-md-left mb-0">{{currentProject.name || "..."}}</h1>
+      </div>
+  </div>
+</div>
 
 <!-- Videos -->
-<div class="w-100 bg-mosaico-blanco pt-5" [hidden]="(currentProject.show_videos == 0 || currentProject.videos.length < 1) && currentProject.show_text == 0">
+<div class="w-100 bg-mosaico-blanco" [hidden]="(currentProject.show_videos == 0 || currentProject.videos.length < 1) && currentProject.show_text == 0">
     <video-slider [hidden]="(currentProject.show_videos == 0 || currentProject.videos.length < 1)" [project]="currentProject"></video-slider>
 </div>
 
@@ -13,12 +21,7 @@
 <div class="bg-mosaico-blanco pb-5">
   <div class="container">
       <div class="row desc-strip">
-          <div class="col">
-              <div>
-                  <h1 class="desc-title text-center text-md-left">{{currentProject.name || "..."}}</h1>
-                  <div class="desc-text" [innerHtml]="projectDescription"></div>
-              </div>
-          </div>
+          <div class="desc-text" [innerHtml]="projectDescription"></div>
       </div>
   </div>
 </div>
