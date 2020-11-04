@@ -1,7 +1,17 @@
+
+<!-- Videos -->
+<div class="w-100 bg-mosaico-blanco pt-5" [hidden]="(currentProject.show_videos == 0 || currentProject.videos.length < 1) && currentProject.show_text == 0">
+    <video-slider [hidden]="(currentProject.show_videos == 0 || currentProject.videos.length < 1)" [project]="currentProject"></video-slider>
+</div>
+
+<!-- Politicxs -->
+<div class="bg-mosaico-blanco">
+  <politician-slider [politiciansList]="politiciansListSlider" [project]="currentProject"></politician-slider>
+</div>
+
+<!-- Descripcion -->
 <div class="bg-mosaico-blanco pb-5">
   <div class="container">
-
-      <!-- Descripcion -->
       <div class="row desc-strip">
           <div class="col">
               <div>
@@ -11,12 +21,23 @@
           </div>
       </div>
   </div>
-
-  <!-- Politicxs -->
-  <politician-slider [politiciansList]="politiciansListSlider" [project]="currentProject"></politician-slider>
 </div>
 
 <div class="mb-5 mb-md-0 w-100 separador"></div>
+
+<!-- Conteo de votos a favor/en contra/etc. -->
+<div class="w-100 bg-azul-claro" [hidden]="currentProject.show_tally == 0">
+    <div class="container">
+        <div class="row">
+            <div class="col col-12">
+                <stats [project]="currentProject" [requestFullList]="true" [politiciansList]="null"></stats>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contador de mensajes enviados -->
+<tally [ammount]="currentProject.tally"></tally>
 
 <ng-template [ngIf]="!currentProject.es_debate">
   <div class="w-100 bg-blanco">
@@ -24,23 +45,7 @@
   </div>
 </ng-template>
 
-<!-- Contador -->
-<tally [ammount]="currentProject.tally"></tally>
-
+<!-- Articulo -->
 <div class="w-100 bg-mosaico-blanco py-2" [hidden]="(currentProject.show_videos == 0 || currentProject.videos.length < 1) && currentProject.show_text == 0">
-    <!-- Videos -->
-    <video-slider [hidden]="(currentProject.show_videos == 0 || currentProject.videos.length < 1)" [project]="currentProject"></video-slider>
-    <!-- Articulo -->
     <article [hidden]="currentProject.show_text == 0" [article]="currentProject.text" [image]="currentProject.image" [dir]="currentProject.dir"></article>
-</div>
-
-<div class="w-100 bg-azul-claro py-5" [hidden]="currentProject.show_tally == 0">
-    <div class="container">
-        <!-- Conteo -->
-        <div class="row">
-            <div class="col col-12">
-                <stats [project]="currentProject" [requestFullList]="true" [politiciansList]="null"></stats>
-            </div>
-        </div>
-    </div>
 </div>
