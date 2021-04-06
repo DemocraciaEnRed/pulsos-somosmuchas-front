@@ -97,7 +97,9 @@ export class PoliticianCardComponent implements OnInit {
         }
         return '';
     }
-
+    public encode(url:string) : string { 
+        return encodeURI(url);
+    }
     public tallyUp(): void {
         this.projectService
             .tallyUp(this._project)
