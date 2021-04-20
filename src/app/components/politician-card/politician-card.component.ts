@@ -54,6 +54,7 @@ export class PoliticianCardComponent implements OnInit {
     public randomMessage: string;
     public last: boolean;
     public stance_postura: string;
+    public showWhatsappHelp: boolean;
 
     public constructor(public configService: ConfigService,
         public projectService: ProjectService) {
@@ -61,6 +62,7 @@ export class PoliticianCardComponent implements OnInit {
 
     public ngOnInit(): void {
         this.imgUrl = environment.imgBase + this.politician.dir + '/box-' + this.politician.image;
+        this.showWhatsappHelp = false;
     }
 
     public openTwitterWindow(): void {
@@ -107,5 +109,10 @@ export class PoliticianCardComponent implements OnInit {
                 this._project.tally = ammount;
             });
     }
+
+    public toggleWhatsappHelp() : void { 
+        this.showWhatsappHelp = !this.showWhatsappHelp;
+    }
+    
 
 }
