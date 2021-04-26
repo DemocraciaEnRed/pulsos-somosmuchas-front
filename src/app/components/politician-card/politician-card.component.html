@@ -109,7 +109,7 @@
                     <div class="example-message py-2 px-3 my-4">{{randomMessage}}</div>
                     <p>¡No te preocupes, vas a poder editar o agregar más texto al mensaje antes de mandarlo!</p>
                 </div>
-                <p><a (click)="tallyUp()" href="https://wa.me/{{politician.phone}}?text={{encode(randomMessage)}}" target="_blank" class="btn btn-primary btn-aec btn-center">Abrir Whatsapp <i class="fab fa-whatsapp"></i></a><p>
+                <p><a (click)="tallyUp()" href="https://wa.me/{{politician.phone.replace('+','').replace(' ', '')}}?text={{encode(randomMessage)}}" target="_blank" class="btn btn-primary btn-aec btn-center">Abrir Whatsapp <i class="fab fa-whatsapp"></i></a><p>
             <p><a (click)="toggleWhatsappHelp()" class="text-primary text-bold" style="cursor: pointer;">Ver como funciona <i class="fas fa-angle-down"></i></a></p>
             <div class="text-center" *ngIf="showWhatsappHelp">
                     <p>Cuando aprietes el boton de "Abrir Whatsapp" se abrira la siguiente pantalla en tu navegador (Tanto movil como en PC)</p>

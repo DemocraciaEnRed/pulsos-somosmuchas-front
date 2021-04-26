@@ -100,7 +100,7 @@ export class PoliticianCardComponent implements OnInit {
         return '';
     }
     public encode(url:string) : string { 
-        return encodeURI(url);
+        return encodeURIComponent(url);
     }
     public tallyUp(): void {
         this.projectService
