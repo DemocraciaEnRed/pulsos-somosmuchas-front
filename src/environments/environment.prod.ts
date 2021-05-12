@@ -1,7 +1,7 @@
 const packageVars = require('../../package.json');
 
 export const environment = {
-  api: 'https://adminasm.democraciaenred.org/',
-  imgBase: 'https://adminasm.democraciaenred.org/',
+  api: 'https://admin.actua.somosmuchas.org/',
+  imgBase: 'https://admin.actua.somosmuchas.org/',
   production: true
 };
