@@ -94,3 +94,36 @@ header {
     font-family: $lato;
     margin-bottom: 15px;
 }
+
+.btn-site {
+    width: 130px;
+    border: 2px solid #881dfd;
+    border-radius: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 3px 6px 0 rgba(126, 5, 163, 0.16);
+    color: #881dfd;
+    font-size: 18px;
+    font-weight: 500;
+    vertical-align: top;
+    padding: 10px;
+    position:relative;
+    top:50px;
+    right:-35%;
+    margin:auto;
+    @media (min-width: $width-large) {
+        position:relative;
+        top:20px;
+        right:-1250px;
+        margin:10px 100px 0px 0px;
+        background-color: #ffffff;
+
+      }
+}
+
+.btn-site:hover{
+    width: 130px;
+    border: 2px solid #ffffff;
+    background-color:  #881dfd;
+    box-shadow: 0 3px 6px 0 rgba(126, 5, 163, 0.16);
+    color: #ffffff;
+}
